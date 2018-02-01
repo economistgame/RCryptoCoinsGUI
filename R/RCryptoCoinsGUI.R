@@ -10,7 +10,7 @@
 #' RCryptoCoinsGUI()
 #'
 #' }
-#' @import "shiny" "shinydashboard" "RCrypto"  "utils"
+#' @import "shiny" "shinydashboard" "RCrypto"  "utils" "quantmod"
 #' @importFrom "shiny" "runApp"
 #' @export
 RCryptoCoinsGUI <- function() {

@@ -1,11 +1,13 @@
 Package: RCryptoCoinsGUI
 Title: Complete Dashboard for your CryptoCurrencys in R
 Version: 0.0.0.9000
-Authors@R: person("Agustín", "Pérez-Torregrosa", email = "agustin.perez01+crypto@goumh.umh.es", role = c("cre","aut"))
+Authors@R: person("Agustin","Perez Torregrosa", email = "agustin.perez01+crypto@goumh.umh.es", role = c("cre","aut"))
 Description:Provides a graphical user interface for the 'RCrypto' package and add historical data and some indicators.
-Depends: R (>= 3.4.2)
-Imports: shiny, shinydashboard, RCrypto, utils, quantmod
+Depends: R (>= 3.0.1), shiny, shinydashboard, RCrypto, utils, quantmod
 License: GPL
 Encoding: UTF-8
 LazyData: true
+BugReports: https://github.com/economistgame/RCryptoCoinsGUI/issues
+URL: https://github.com/economistgame/RCryptoCoinsGUI
 RoxygenNote: 6.0.1
+Maintainer: Agustin Perez Torregrosa <agustin.perez01+crypto@goumh.umh.es>
