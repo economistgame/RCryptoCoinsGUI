@@ -13,10 +13,12 @@
 #' @import "shiny" "shinydashboard" "RCrypto"  "utils" "quantmod"
 #' @importFrom "shiny" "runApp"
 #' @export
+#Launch function
 RCryptoCoinsGUI <- function() {
-
+#remove all false warnings
   utils::capture.output(
     suppressWarnings(
+      #remove run Shiny App
       shiny::runApp(system.file("RCryptoCoinGUI", package = "RCryptoCoinsGUI"))
     )
   )
