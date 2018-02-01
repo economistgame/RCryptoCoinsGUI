@@ -2,6 +2,7 @@
 
 export(RCryptoCoinsGUI)
 import("RCrypto")
+import("quantmod")
 import("shiny")
 import("shinydashboard")
 import("utils")
