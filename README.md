@@ -4,6 +4,8 @@
 [![Travis-CI Build Status](https://travis-ci.org/economistgame/RCryptoCoinsGUI.svg?branch=master)](https://travis-ci.org/economistgame/RCryptoCoinsGUI)
 [![CircleCI](https://circleci.com/gh/economistgame/RCryptoCoinsGUI.svg?style=svg)](https://circleci.com/gh/economistgame/RCryptoCoinsGUI)
 [![codecov](https://codecov.io/gh/economistgame/RCryptoCoinsGUI/branch/master/graph/badge.svg)](https://codecov.io/gh/economistgame/RCryptoCoinsGUI)
+[![Build Status](https://semaphoreci.com/api/v1/economistgame/rcryptocoinsgui/branches/master/badge.svg)](https://semaphoreci.com/economistgame/rcryptocoinsgui)
+
 
 
 **Downloads & Docummentation:**
