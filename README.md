@@ -14,4 +14,4 @@
 
 ## Overview
 --------
-Complete Dashboard for your CryptoCurrencys in R
+Complete Dashboard for your Alternative Coins in R
