@@ -20,10 +20,6 @@ Complete Dashboard for your Alternative Coins in R
 
 In the future, you will install the stable version from CRAN, but now it was in evaluation progress. You have to install using the development repository from GitHub, run this instead:
 
-[comment]: <> (```r
-install.packages("RCryptoCoinsGUI")
-```)
-
 ```r
 if (!require("devtools"))
   install.packages("devtools")
