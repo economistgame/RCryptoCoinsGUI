@@ -23,5 +23,6 @@ In the future, you will install the stable version from CRAN, but now it was in 
 ```r
 if (!require("devtools"))
   install.packages("devtools")
-devtools::install_github("rstudio/RCryptoCoinsGUI")
+devtools::install_github("economistgame/RCryptoCoinsGUI")
 ```
+
