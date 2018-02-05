@@ -12,4 +12,4 @@ LazyData: true
 BugReports: https://github.com/economistgame/RCryptoCoinsGUI/issues
 URL: https://github.com/economistgame/RCryptoCoinsGUI
 RoxygenNote: 6.0.1
-
+Suggests: testthat

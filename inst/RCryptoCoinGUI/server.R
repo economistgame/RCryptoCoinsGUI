@@ -1,37 +1,50 @@
-
-
 library(shiny)
 library(shinydashboard)
 library(RCrypto)
 library(quantmod)
 
-# Define server logic required to draw a histogram
+##Function to obtain current information about a one cryptocoin
+ Only_Selected_Stock <- function(Symbol,Currency){
+   All_values <- RCrypto::CoinMarketCap_All(currency = Currency)
+   All_values[which(All_values$symbol == Symbol), ]
+ }
+##Function to obtain histiry information about cryptocoin
+ GetCurrencyStock <- function(CryptoCoin,Currency){
+   Object <- paste0(CryptoCoin, "-", Currency)
+   data <- try(suppressWarnings(quantmod::getSymbols(Object, auto.assign = FALSE)), TRUE)
+   validate(
+     need(class(data) != "try-error", "Excuse, but this history quotes have not available")
+   )
+   data
+ }
+##Table formater
+ FormatTable <- function(All_Values){
+ All <- All_Values[, -c(1, 3, 4, 9, 10, 11, 15)]
+ colnames(All)[1:8] <- c("Name", "Price USD", "Price BTC", "24h Volume USD", "Market Cap USD", "1h Change", "24h Change", "Week Change")
+ All
+ }
+
 shinyServer(function(input, output, session) {
-  Last_Quotes <- reactive({
+
+###All current available data
+Last_Quotes <- reactive({
     invalidateLater(5000, session)
     CoinMarketCap_All(currency = input$currency)
   })
-
-  Only_selected <- reactive({
-    All <- Last_Quotes()
-    All[which(All$symbol == input$crypto_coin_selected), ]
+###Now showed in Dashboard
+Only_selected <- reactive({
+    invalidateLater(5000, session)
+    Only_Selected_Stock(input$crypto_coin_selected, input$currency)
   })
-
-  History <- reactive({
-    Object <- paste0(input$crypto_coin_selected, "-", input$currency)
-    data <- try(getSymbols(Object, auto.assign = FALSE), TRUE)
-    validate(
-      need(class(data) != "try-error", "Excuse, but this history quotes have not available")
-    )
-    data
+###Obtain History of Yahoo Finance
+History <- reactive({
+    GetCurrencyStock(input$crypto_coin_selected,input$currency)
   })
-
-  output$tabla <- renderTable({
-    All <- Last_Quotes()[, -c(1, 3, 4, 9, 10, 11, 15)]
-    colnames(All)[1:8] <- c("Name", "Price USD", "Price BTC", "24h Volume USD", "Market Cap USD", "1h Change", "24h Change", "Week Change")
-    All
+###All current available data in a table
+output$tabla <- renderTable({
+    FormatTable(Last_Quotes())
   })
-  output$price_money <- renderInfoBox({
+output$price_money <- renderInfoBox({
     Price_money <- Only_selected()[, paste0("price_", tolower(input$currency))]
     infoBox(
       paste0("Price in ", input$currency), round(as.numeric(Price_money), 2), icon = icon("money"),
@@ -73,9 +86,8 @@ shinyServer(function(input, output, session) {
     )
   })
 
-
   output$quote_yahpp <- renderPlot({
     chartSeries(History(), name = paste0(input$crypto_coin_selected, "-", input$currency), subset = "last 2 years", TA = input$analysis, theme = "white")
   })
 })
-})
+
