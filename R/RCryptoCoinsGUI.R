@@ -6,7 +6,7 @@
 #'
 #'
 #' @examples
-#' \dontrun{
+#' if(interactive()){
 #' RCryptoCoinsGUI()
 #'
 #' }

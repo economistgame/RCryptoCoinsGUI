@@ -6,3 +6,5 @@
 ^.*\circleci$
 ^\.circleci$
 ^_config\.yml$
+^README\.md$
+^cran-comments\.md$

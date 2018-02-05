@@ -10,7 +10,7 @@ RCryptoCoinsGUI()
 User-friendly Interface using RCrypto and quantmod to see the current situation of cryptocurrents
 }
 \examples{
-\dontrun{
+if(interactive()){
 RCryptoCoinsGUI()
 
 }
