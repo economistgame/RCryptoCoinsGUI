@@ -1,9 +1,12 @@
 # RCryptoCoinsGUI
 
-**Build Status:** [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/economistgame/RCryptoCoinsGUI?branch=master&svg=true)](https://ci.appveyor.com/project/economistgame/RCryptoCoinsGUI)
-[![Travis-CI Build Status](https://travis-ci.org/economistgame/RCryptoCoinsGUI.svg?branch=master)](https://travis-ci.org/economistgame/RCryptoCoinsGUI)
-[![CircleCI](https://circleci.com/gh/economistgame/RCryptoCoinsGUI.svg?style=svg)](https://circleci.com/gh/economistgame/RCryptoCoinsGUI)
-[![codecov](https://codecov.io/gh/economistgame/RCryptoCoinsGUI/branch/master/graph/badge.svg)](https://codecov.io/gh/economistgame/RCryptoCoinsGUI)
+**Build Status:** 
+
+`Linux/Mac`: [![Travis-CI Build Status](https://travis-ci.org/economistgame/RCryptoCoinsGUI.svg?branch=master)](https://travis-ci.org/economistgame/RCryptoCoinsGUI)
+`Windows`: [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/economistgame/RCryptoCoinsGUI?branch=master&svg=true)](https://ci.appveyor.com/project/economistgame/RCryptoCoinsGUI)
+
+`R Nightly builds` : [![CircleCI](https://circleci.com/gh/economistgame/RCryptoCoinsGUI.svg?style=svg)](https://circleci.com/gh/economistgame/RCryptoCoinsGUI)
+`Autotest percentage`: [![codecov](https://codecov.io/gh/economistgame/RCryptoCoinsGUI/branch/master/graph/badge.svg)](https://codecov.io/gh/economistgame/RCryptoCoinsGUI)
 
 
 **Downloads & Docummentation:**
