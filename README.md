@@ -14,6 +14,9 @@
 [![Downloads](http://cranlogs.r-pkg.org/badges/RCryptoCoinsGUI)](https://cran.r-project.org/package=RCryptoCoinsGUI)
 [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![RDocumentation](https://staging.rdocumentation.org/badges/version/RCryptoCoinsGUI)](http://rdocumentation.org/packages/RCryptoCoinsGUI)
+**Cite this:**
+[![DOI](https://zenodo.org/badge/119812377.svg)](https://zenodo.org/badge/latestdoi/119812377)
+
 
 ## Overview
 --------
